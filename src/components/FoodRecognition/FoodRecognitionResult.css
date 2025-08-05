@@ -1,0 +1,256 @@
+.food-recognition-result {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.result-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.result-image {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.result-header h4 {
+  margin: 0 !important;
+  color: #2d5016 !important;
+}
+
+.food-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.food-item-card {
+  border: 2px solid #f0f0f0 !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease !important;
+}
+
+.food-item-card:hover {
+  border-color: #52c41a !important;
+  box-shadow: 0 4px 12px rgba(82, 196, 26, 0.1) !important;
+}
+
+.food-item {
+  width: 100%;
+}
+
+.food-basic-info {
+  width: 100%;
+}
+
+.food-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.food-name .ant-typography {
+  font-size: 16px !important;
+  color: #2d5016 !important;
+}
+
+.food-details {
+  margin-bottom: 8px;
+}
+
+.food-details .ant-tag {
+  border-radius: 6px !important;
+  font-size: 12px !important;
+}
+
+.food-notes {
+  margin: 0 !important;
+  font-size: 13px !important;
+  color: #666 !important;
+  background: #f9f9f9;
+  padding: 8px;
+  border-radius: 6px;
+  border-left: 3px solid #52c41a;
+}
+
+.no-food-detected {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 2px dashed #d9d9d9;
+}
+
+.result-actions {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 16px;
+}
+
+.save-button {
+  background: linear-gradient(135deg, #52c41a, #73d13d) !important;
+  border: none !important;
+  border-radius: 50px !important;
+  height: 50px !important;
+  padding: 0 32px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 16px rgba(82, 196, 26, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.save-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(82, 196, 26, 0.4) !important;
+}
+
+.save-button:disabled {
+  background: #d9d9d9 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.cancel-button {
+  background: white !important;
+  color: #666 !important;
+  border: 2px solid #d9d9d9 !important;
+  border-radius: 50px !important;
+  height: 50px !important;
+  padding: 0 32px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.cancel-button:hover {
+  border-color: #ff4d4f !important;
+  color: #ff4d4f !important;
+  transform: translateY(-1px) !important;
+}
+
+/* 编辑模式样式 */
+.food-basic-info .ant-input,
+.food-basic-info .ant-select-selector,
+.food-basic-info .ant-picker {
+  border-radius: 6px !important;
+}
+
+.food-basic-info .ant-input:focus,
+.food-basic-info .ant-select-focused .ant-select-selector,
+.food-basic-info .ant-picker-focused {
+  border-color: #52c41a !important;
+  box-shadow: 0 0 0 2px rgba(82, 196, 26, 0.1) !important;
+}
+
+.food-basic-info .ant-typography {
+  margin-bottom: 4px !important;
+  font-weight: 500 !important;
+  color: #2d5016 !important;
+}
+
+/* 滚动条样式 */
+.food-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.food-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.food-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.food-list::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .food-recognition-result {
+    gap: 16px;
+  }
+  
+  .result-image {
+    max-height: 150px;
+  }
+  
+  .result-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .food-name {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .save-button,
+  .cancel-button {
+    height: 45px !important;
+    padding: 0 24px !important;
+    font-size: 14px !important;
+  }
+  
+  .result-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .result-actions .ant-space {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .food-recognition-result {
+    gap: 12px;
+  }
+  
+  .result-image {
+    max-height: 120px;
+  }
+  
+  .food-list {
+    gap: 8px;
+    max-height: 250px;
+  }
+  
+  .food-item-card .ant-card-body {
+    padding: 12px !important;
+  }
+  
+  .food-basic-info .ant-space-vertical {
+    gap: 8px !important;
+  }
+}

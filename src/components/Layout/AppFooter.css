@@ -1,0 +1,309 @@
+/* 应用底部样式 */
+.app-footer {
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+  padding: 24px 0 16px;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 主要信息区域 */
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand-icon {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brand-text .ant-typography {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.brand-desc {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #595959;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #1890ff;
+}
+
+.footer-link .anticon {
+  font-size: 14px;
+}
+
+/* 分割线 */
+.footer-divider {
+  margin: 16px 0;
+  border-color: #f0f0f0;
+}
+
+/* 底部信息 */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.copyright .ant-typography {
+  font-size: 12px;
+}
+
+.footer-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.made-with {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.heart-icon {
+  color: #ff4d4f;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.tech-stack {
+  font-size: 12px;
+  padding: 2px 8px;
+  background: #f0f7ff;
+  border: 1px solid #d6e4ff;
+  border-radius: 4px;
+  color: #1890ff;
+}
+
+/* 环保提示 */
+.eco-message {
+  text-align: center;
+  padding: 12px;
+  background: linear-gradient(135deg, #f6ffed 0%, #f0f9ff 100%);
+  border: 1px solid #d9f7be;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.eco-text {
+  font-size: 12px;
+  color: #52c41a;
+  font-weight: 500;
+}
+
+/* 心跳动画 */
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .footer-content {
+    padding: 0 16px;
+  }
+  
+  .footer-main {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .footer-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .footer-links .ant-space {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .app-footer {
+    padding: 16px 0 12px;
+  }
+  
+  .footer-content {
+    padding: 0 12px;
+  }
+  
+  .brand-icon {
+    font-size: 20px;
+  }
+  
+  .brand-text .ant-typography {
+    font-size: 14px;
+  }
+  
+  .brand-desc {
+    font-size: 11px;
+  }
+  
+  .footer-link {
+    font-size: 12px;
+  }
+  
+  .eco-message {
+    padding: 8px;
+  }
+  
+  .eco-text {
+    font-size: 11px;
+  }
+}
+
+/* 深色主题支持 */
+.app-footer.dark {
+  background: #141414;
+  border-top-color: #303030;
+  color: #fff;
+}
+
+.app-footer.dark .footer-link {
+  color: #d9d9d9;
+}
+
+.app-footer.dark .footer-link:hover {
+  color: #40a9ff;
+}
+
+.app-footer.dark .footer-divider {
+  border-color: #303030;
+}
+
+.app-footer.dark .tech-stack {
+  background: #111b26;
+  border-color: #1c3a5a;
+  color: #40a9ff;
+}
+
+.app-footer.dark .eco-message {
+  background: linear-gradient(135deg, #162312 0%, #111b26 100%);
+  border-color: #274916;
+}
+
+.app-footer.dark .eco-text {
+  color: #73d13d;
+}
+
+/* 悬浮效果 */
+.footer-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #1890ff;
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover::before {
+  width: 100%;
+}
+
+/* 加载动画 */
+.app-footer {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 品牌区域悬浮效果 */
+.footer-brand {
+  transition: transform 0.3s ease;
+}
+
+.footer-brand:hover {
+  transform: translateY(-2px);
+}
+
+/* 环保消息闪烁效果 */
+.eco-message {
+  position: relative;
+  overflow: hidden;
+}
+
+.eco-message::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}

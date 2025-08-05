@@ -1,0 +1,198 @@
+.camera-capture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 20px;
+}
+
+.camera-container {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 4/3;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camera-video,
+.captured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.camera-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.camera-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: white;
+  font-size: 16px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #52c41a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.camera-controls {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.capture-button {
+  background: linear-gradient(135deg, #52c41a, #73d13d) !important;
+  border: none !important;
+  border-radius: 50px !important;
+  height: 60px !important;
+  padding: 0 32px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 16px rgba(82, 196, 26, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.capture-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(82, 196, 26, 0.4) !important;
+}
+
+.confirm-button {
+  background: linear-gradient(135deg, #52c41a, #73d13d) !important;
+  border: none !important;
+  border-radius: 50px !important;
+  height: 50px !important;
+  padding: 0 24px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 16px rgba(82, 196, 26, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.confirm-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(82, 196, 26, 0.4) !important;
+}
+
+.retake-button {
+  background: white !important;
+  color: #666 !important;
+  border: 2px solid #d9d9d9 !important;
+  border-radius: 50px !important;
+  height: 50px !important;
+  padding: 0 24px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.retake-button:hover {
+  border-color: #52c41a !important;
+  color: #52c41a !important;
+  transform: translateY(-1px) !important;
+}
+
+.cancel-button {
+  background: white !important;
+  color: #666 !important;
+  border: 2px solid #d9d9d9 !important;
+  border-radius: 50px !important;
+  height: 60px !important;
+  padding: 0 32px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.cancel-button:hover {
+  border-color: #ff4d4f !important;
+  color: #ff4d4f !important;
+  transform: translateY(-1px) !important;
+}
+
+.camera-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.error-actions {
+  display: flex;
+  justify-content: center;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .camera-capture {
+    padding: 16px;
+    gap: 20px;
+  }
+  
+  .camera-container {
+    max-width: 100%;
+  }
+  
+  .capture-button {
+    height: 50px !important;
+    padding: 0 24px !important;
+    font-size: 14px !important;
+  }
+  
+  .cancel-button {
+    height: 50px !important;
+    padding: 0 24px !important;
+    font-size: 14px !important;
+  }
+  
+  .confirm-button,
+  .retake-button {
+    height: 45px !important;
+    padding: 0 20px !important;
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .camera-capture {
+    padding: 12px;
+    gap: 16px;
+  }
+  
+  .camera-loading {
+    font-size: 14px;
+  }
+  
+  .loading-spinner {
+    width: 32px;
+    height: 32px;
+    border-width: 2px;
+  }
+}

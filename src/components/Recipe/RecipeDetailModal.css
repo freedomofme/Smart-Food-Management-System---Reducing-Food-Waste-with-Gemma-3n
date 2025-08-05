@@ -1,0 +1,361 @@
+.recipe-detail-modal {
+  .ant-modal-content {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .ant-modal-header {
+    background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+    border-bottom: none;
+    padding: 20px 24px;
+    
+    .ant-modal-title {
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .ant-modal-close {
+    color: white;
+    
+    &:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+
+.recipe-detail-content {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 0;
+}
+
+/* 菜谱头部信息 */
+.recipe-header {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 0;
+  
+  .recipe-image {
+    flex-shrink: 0;
+    width: 200px;
+    height: 150px;
+    border-radius: 12px;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .recipe-info {
+    flex: 1;
+    
+    .recipe-tags {
+      margin-bottom: 12px;
+      
+      .ant-tag {
+        border-radius: 20px;
+        padding: 4px 12px;
+        font-size: 12px;
+        border: none;
+        
+        &.difficulty-tag {
+          font-weight: 600;
+        }
+        
+        &.time-tag {
+          background: #fef3c7;
+          color: #d97706;
+        }
+        
+        &.serving-tag {
+          background: #e0e7ff;
+          color: #4338ca;
+        }
+        
+        &.availability-tag {
+          font-weight: 600;
+        }
+      }
+    }
+    
+    .recipe-description {
+      color: #6b7280;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    
+    .nutrition-info {
+      .ant-typography-title {
+        margin-bottom: 8px;
+        color: #374151;
+      }
+      
+      .nutrition-tag {
+        background: #f3f4f6;
+        color: #374151;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 4px 8px;
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+/* 食材部分 */
+.ingredients-section {
+  .ant-typography-title {
+    color: #374151;
+    margin-bottom: 16px;
+  }
+  
+  .ingredient-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    padding: 12px;
+    transition: all 0.2s ease;
+    
+    &.available {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+    }
+    
+    &.unavailable {
+      background: #fef2f2;
+      border-color: #fecaca;
+    }
+    
+    &:hover {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .ingredient-content {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      
+      .ingredient-checkbox {
+        flex-shrink: 0;
+      }
+      
+      .ingredient-info {
+        flex: 1;
+        
+        .ingredient-name {
+          display: block;
+          color: #374151;
+          font-size: 14px;
+        }
+        
+        .ingredient-amount {
+          color: #6b7280;
+          font-size: 12px;
+        }
+      }
+      
+      .ingredient-status {
+        flex-shrink: 0;
+        
+        .ant-tag {
+          border-radius: 12px;
+          font-size: 11px;
+          padding: 2px 8px;
+        }
+      }
+    }
+  }
+  
+  .missing-ingredients {
+    margin-top: 16px;
+    padding: 16px;
+    background: #fef2f2;
+    border-radius: 8px;
+    border: 1px solid #fecaca;
+    
+    .missing-title {
+      color: #dc2626;
+      margin-bottom: 8px;
+    }
+    
+    .missing-list {
+      .missing-tag {
+        margin-bottom: 4px;
+        border-radius: 6px;
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+/* 制作步骤 */
+.instructions-section {
+  .ant-typography-title {
+    color: #374151;
+    margin-bottom: 16px;
+  }
+  
+  .cooking-steps {
+    .ant-steps-item {
+      .ant-steps-item-content {
+        .step-content {
+          .step-instruction {
+            color: #374151;
+            line-height: 1.6;
+            margin-bottom: 8px;
+          }
+          
+          .step-actions {
+            .complete-button {
+              border-radius: 6px;
+              font-size: 12px;
+              height: 28px;
+              
+              &.ant-btn-primary {
+                background: #22c55e;
+                border-color: #22c55e;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .step-navigation {
+    margin-top: 20px;
+    text-align: center;
+    
+    .ant-btn {
+      border-radius: 8px;
+      height: 36px;
+      padding: 0 16px;
+      
+      &.ant-btn-primary {
+        background: #22c55e;
+        border-color: #22c55e;
+        
+        &:hover {
+          background: #16a34a;
+          border-color: #16a34a;
+        }
+      }
+      
+      &.reset-button {
+        color: #6b7280;
+        border-color: #d1d5db;
+        
+        &:hover {
+          color: #374151;
+          border-color: #9ca3af;
+        }
+      }
+    }
+  }
+}
+
+/* 进度部分 */
+.progress-section {
+  margin-top: 20px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  
+  .progress-info {
+    .ant-typography {
+      color: #374151;
+      margin-bottom: 8px;
+    }
+    
+    .progress-bar {
+      height: 8px;
+      background: #e5e7eb;
+      border-radius: 4px;
+      overflow: hidden;
+      
+      .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #22c55e 0%, #16a34a 100%);
+        transition: width 0.3s ease;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .recipe-detail-modal {
+    .ant-modal {
+      margin: 0;
+      max-width: 100vw;
+      top: 0;
+    }
+    
+    .ant-modal-content {
+      border-radius: 0;
+    }
+  }
+  
+  .recipe-header {
+    flex-direction: column;
+    
+    .recipe-image {
+      width: 100%;
+      height: 200px;
+    }
+  }
+  
+  .ingredient-item {
+    .ingredient-content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      
+      .ingredient-status {
+        align-self: flex-end;
+      }
+    }
+  }
+  
+  .step-navigation {
+    .ant-space {
+      flex-direction: column;
+      width: 100%;
+      
+      .ant-btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .recipe-detail-content {
+    max-height: 80vh;
+  }
+  
+  .recipe-header {
+    .recipe-info {
+      .recipe-tags {
+        .ant-tag {
+          font-size: 10px;
+          padding: 2px 8px;
+        }
+      }
+    }
+  }
+  
+  .ingredients-section,
+  .instructions-section {
+    .ant-typography-title {
+      font-size: 16px;
+    }
+  }
+}

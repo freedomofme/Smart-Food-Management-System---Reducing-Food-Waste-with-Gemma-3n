@@ -1,0 +1,11 @@
+.env.local
+.env
+.env.*.local
+node_modules
+build
+dist
+.git
+.trae
+.log
+*.log
+.DS_Store

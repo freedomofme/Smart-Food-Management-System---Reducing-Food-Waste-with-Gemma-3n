@@ -1,0 +1,333 @@
+.settings-page {
+  padding: 20px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.settings-header {
+  text-align: center;
+  margin-bottom: 24px;
+  
+  .ant-typography-title {
+    color: #1f2937;
+    margin-bottom: 8px;
+  }
+  
+  .settings-subtitle {
+    color: #6b7280;
+    font-size: 16px;
+  }
+}
+
+.settings-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.settings-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 设置卡片 */
+.settings-card {
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  
+  .ant-card-head {
+    border-bottom: 1px solid #f1f5f9;
+    
+    .ant-card-head-title {
+      color: #374151;
+      font-weight: 600;
+      font-size: 16px;
+    }
+  }
+  
+  .ant-card-body {
+    padding: 24px;
+  }
+  
+  /* 表单项样式 */
+  .ant-form-item {
+    margin-bottom: 20px;
+    
+    .ant-form-item-label {
+      > label {
+        color: #374151;
+        font-weight: 500;
+        
+        &.ant-form-item-required {
+          &::before {
+            color: #ef4444;
+          }
+        }
+      }
+    }
+    
+    .ant-form-item-extra {
+      color: #6b7280;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+  }
+  
+  /* 开关样式 */
+  .ant-switch {
+    &.ant-switch-checked {
+      background-color: #22c55e;
+    }
+  }
+  
+  /* 输入框样式 */
+  .number-input {
+    width: 200px;
+    
+    .ant-input-number {
+      border-radius: 8px;
+    }
+  }
+  
+  .time-select,
+  .theme-select,
+  .language-select {
+    width: 200px;
+    
+    .ant-select-selector {
+      border-radius: 8px;
+    }
+  }
+}
+
+/* 数据管理操作 */
+.data-actions {
+  .action-buttons {
+    width: 100%;
+    
+    .ant-btn {
+      width: 200px;
+      height: 40px;
+      border-radius: 8px;
+      font-weight: 500;
+      
+      &.export-button {
+        color: #22c55e;
+        border-color: #22c55e;
+        
+        &:hover {
+          background-color: #f0fdf4;
+          border-color: #16a34a;
+          color: #16a34a;
+        }
+      }
+      
+      &.import-button {
+        color: #3b82f6;
+        border-color: #3b82f6;
+        
+        &:hover {
+          background-color: #eff6ff;
+          border-color: #2563eb;
+          color: #2563eb;
+        }
+      }
+      
+      &.clear-button {
+        &:hover {
+          background-color: #fef2f2;
+        }
+      }
+      
+      &.reset-button {
+        color: #6b7280;
+        border-color: #d1d5db;
+        
+        &:hover {
+          background-color: #f9fafb;
+          border-color: #9ca3af;
+          color: #374151;
+        }
+      }
+    }
+  }
+}
+
+/* 关于卡片 */
+.about-card {
+  .about-content {
+    .app-info {
+      text-align: center;
+      margin-bottom: 24px;
+      
+      .ant-typography-title {
+        color: #1f2937;
+        margin-bottom: 8px;
+      }
+      
+      .ant-typography {
+        display: block;
+        margin-bottom: 4px;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    
+    .features-list {
+      margin-bottom: 24px;
+      
+      .ant-typography-title {
+        color: #374151;
+        margin-bottom: 12px;
+      }
+      
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+        li {
+          padding: 8px 0;
+          color: #6b7280;
+          font-size: 14px;
+          
+          &:first-child {
+            padding-top: 0;
+          }
+          
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+    
+    .eco-alert {
+      border-radius: 8px;
+      
+      .ant-alert-message {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+/* 保存按钮 */
+.settings-actions {
+  text-align: center;
+  margin-top: 32px;
+  
+  .save-button {
+    width: 200px;
+    height: 44px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    
+    &:hover {
+      background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .settings-page {
+    padding: 16px;
+  }
+  
+  .settings-header {
+    .ant-typography-title {
+      font-size: 24px;
+    }
+    
+    .settings-subtitle {
+      font-size: 14px;
+    }
+  }
+  
+  .settings-form {
+    max-width: 100%;
+  }
+  
+  .settings-card {
+    .ant-card-body {
+      padding: 16px;
+    }
+    
+    .number-input,
+    .time-select,
+    .theme-select,
+    .language-select {
+      width: 100%;
+    }
+  }
+  
+  .data-actions {
+    .action-buttons {
+      .ant-btn {
+        width: 100%;
+      }
+    }
+  }
+  
+  .settings-actions {
+    .save-button {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-card {
+    .ant-card-head {
+      .ant-card-head-title {
+        font-size: 14px;
+      }
+    }
+    
+    .ant-form-item {
+      .ant-form-item-label {
+        > label {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  
+  .about-card {
+    .about-content {
+      .app-info {
+        .ant-typography-title {
+          font-size: 18px;
+        }
+      }
+      
+      .features-list {
+        .ant-typography-title {
+          font-size: 16px;
+        }
+        
+        ul {
+          li {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}

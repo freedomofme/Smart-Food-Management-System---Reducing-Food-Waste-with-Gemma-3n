@@ -1,0 +1,99 @@
+.floating-action-button {
+  position: fixed;
+  bottom: 90px; /* 在底部导航上方 */
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+  z-index: 999;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-action-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(24, 144, 255, 0.5);
+}
+
+.floating-action-button:active {
+  transform: scale(0.95);
+}
+
+.floating-action-button .anticon {
+  font-size: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .floating-action-button {
+    bottom: 85px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+  }
+  
+  .floating-action-button .anticon {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-action-button {
+    bottom: 80px;
+    right: 12px;
+    width: 48px;
+    height: 48px;
+  }
+  
+  .floating-action-button .anticon {
+    font-size: 16px;
+  }
+}
+
+/* 动画效果 */
+.floating-action-button {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 脉冲效果（可选） */
+.floating-action-button.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 12px rgba(24, 144, 255, 0.6), 0 0 0 10px rgba(24, 144, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+  }
+}
+
+/* 确保在深色模式下也能正常显示 */
+@media (prefers-color-scheme: dark) {
+  .floating-action-button {
+    box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+  }
+  
+  .floating-action-button:hover {
+    box-shadow: 0 6px 16px rgba(24, 144, 255, 0.4);
+  }
+}

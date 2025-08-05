@@ -1,0 +1,174 @@
+.bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid #f0f0f0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+}
+
+.bottom-nav-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  min-width: 60px;
+  flex: 1;
+  max-width: 80px;
+}
+
+.bottom-nav-item:hover {
+  background-color: #f5f5f5;
+}
+
+.bottom-nav-item.active {
+  color: #1890ff;
+}
+
+.bottom-nav-item.active .nav-icon {
+  color: #1890ff;
+  transform: scale(1.1);
+}
+
+.nav-icon {
+  font-size: 20px;
+  margin-bottom: 2px;
+  transition: all 0.2s ease;
+  color: #8c8c8c;
+}
+
+.nav-label {
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: center;
+  color: #8c8c8c;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.bottom-nav-item.active .nav-label {
+  color: #1890ff;
+  font-weight: 500;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .bottom-navigation {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .bottom-nav-container {
+    padding: 6px 0;
+  }
+  
+  .bottom-nav-item {
+    padding: 4px 6px;
+    min-width: 50px;
+  }
+  
+  .nav-icon {
+    font-size: 18px;
+  }
+  
+  .nav-label {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-icon {
+    font-size: 16px;
+  }
+  
+  .nav-label {
+    font-size: 9px;
+  }
+  
+  .bottom-nav-item {
+    min-width: 45px;
+    padding: 3px 4px;
+  }
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+  .bottom-navigation {
+    background: #141414;
+    border-top-color: #303030;
+  }
+  
+  .bottom-nav-item:hover {
+    background-color: #262626;
+  }
+  
+  .nav-icon,
+  .nav-label {
+    color: #8c8c8c;
+  }
+  
+  .bottom-nav-item.active .nav-icon,
+  .bottom-nav-item.active .nav-label {
+    color: #1890ff;
+  }
+}
+
+/* 确保内容不被底部导航遮挡 */
+.app-content {
+  padding-bottom: 70px;
+}
+
+@media (max-width: 768px) {
+  .app-content {
+    padding-bottom: 65px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-content {
+    padding-bottom: 60px;
+  }
+}
+
+/* 防止底部导航在某些浏览器中被遮挡 */
+.bottom-navigation {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/* 增强点击体验 */
+.bottom-nav-item {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.bottom-nav-item:active {
+  transform: scale(0.95);
+  background-color: #e6f7ff;
+}
+
+/* 确保在iOS Safari中正确显示 */
+@supports (padding: max(0px)) {
+  .bottom-navigation {
+    padding-bottom: max(8px, env(safe-area-inset-bottom));
+  }
+}

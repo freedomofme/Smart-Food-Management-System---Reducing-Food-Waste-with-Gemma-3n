@@ -1,0 +1,283 @@
+.add-food-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8f5e8 0%, #f0f9ff 100%);
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.back-button {
+  border-radius: 8px !important;
+  border: 2px solid #d9d9d9 !important;
+  color: #666 !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.back-button:hover {
+  border-color: #52c41a !important;
+  color: #52c41a !important;
+  transform: translateX(-2px) !important;
+}
+
+.page-title {
+  color: #2d5016 !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  flex: 1;
+}
+
+.ai-recognition-card,
+.manual-input-card {
+  border-radius: 16px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  border: none !important;
+  margin-bottom: 24px;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+}
+
+.section-title {
+  color: #2d5016 !important;
+  margin-bottom: 8px !important;
+  font-weight: 600 !important;
+}
+
+.section-description {
+  display: block;
+  margin-bottom: 20px !important;
+  color: #666 !important;
+  font-size: 14px !important;
+}
+
+.ai-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.ai-button.camera {
+  background: linear-gradient(135deg, #52c41a, #73d13d) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  height: 50px !important;
+  padding: 0 24px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 16px rgba(82, 196, 26, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.ai-button.camera:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(82, 196, 26, 0.4) !important;
+}
+
+.ai-button.upload {
+  background: linear-gradient(135deg, #1890ff, #40a9ff) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 12px !important;
+  height: 50px !important;
+  padding: 0 24px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 16px rgba(24, 144, 255, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.ai-button.upload:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(24, 144, 255, 0.4) !important;
+  color: white !important;
+}
+
+.add-food-form {
+  margin-top: 20px;
+}
+
+.add-food-form .ant-form-item-label > label {
+  color: #2d5016 !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+}
+
+.add-food-form .ant-input,
+.add-food-form .ant-select-selector,
+.add-food-form .ant-picker,
+.add-food-form .ant-input-number {
+  border-radius: 8px !important;
+  border: 2px solid #f0f0f0 !important;
+  transition: all 0.3s ease !important;
+}
+
+.add-food-form .ant-input:focus,
+.add-food-form .ant-select-focused .ant-select-selector,
+.add-food-form .ant-picker-focused,
+.add-food-form .ant-input-number-focused {
+  border-color: #52c41a !important;
+  box-shadow: 0 0 0 2px rgba(82, 196, 26, 0.1) !important;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+}
+
+.quantity-input,
+.unit-input {
+  margin-bottom: 24px !important;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.save-button {
+  background: linear-gradient(135deg, #52c41a, #73d13d) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  height: 50px !important;
+  padding: 0 32px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 16px rgba(82, 196, 26, 0.3) !important;
+  transition: all 0.3s ease !important;
+  flex: 1;
+}
+
+.save-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(82, 196, 26, 0.4) !important;
+}
+
+.cancel-button {
+  background: white !important;
+  color: #666 !important;
+  border: 2px solid #d9d9d9 !important;
+  border-radius: 12px !important;
+  height: 50px !important;
+  padding: 0 32px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  flex: 1;
+}
+
+.cancel-button:hover {
+  border-color: #ff4d4f !important;
+  color: #ff4d4f !important;
+  transform: translateY(-1px) !important;
+}
+
+.camera-modal .ant-modal-content,
+.result-modal .ant-modal-content {
+  border-radius: 16px !important;
+  overflow: hidden;
+}
+
+.camera-modal .ant-modal-header,
+.result-modal .ant-modal-header {
+  background: linear-gradient(135deg, #52c41a, #73d13d) !important;
+  border-bottom: none !important;
+}
+
+.camera-modal .ant-modal-title,
+.result-modal .ant-modal-title {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+.camera-modal .ant-modal-close,
+.result-modal .ant-modal-close {
+  color: white !important;
+}
+
+.camera-modal .ant-modal-close:hover,
+.result-modal .ant-modal-close:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .add-food-page {
+    padding: 16px;
+  }
+  
+  .page-header {
+    margin-bottom: 20px;
+  }
+  
+  .page-title {
+    font-size: 1.5rem !important;
+  }
+  
+  .ai-actions .ant-space {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .ai-button.camera,
+  .ai-button.upload {
+    width: 100%;
+    height: 45px !important;
+    font-size: 14px !important;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .save-button,
+  .cancel-button {
+    height: 45px !important;
+    font-size: 14px !important;
+  }
+  
+  .camera-modal,
+  .result-modal {
+    margin: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-food-page {
+    padding: 12px;
+  }
+  
+  .page-header {
+    gap: 12px;
+  }
+  
+  .back-button {
+    padding: 4px 8px !important;
+  }
+  
+  .section-title {
+    font-size: 1.1rem !important;
+  }
+  
+  .section-description {
+    font-size: 13px !important;
+  }
+  
+  .ai-recognition-card .ant-card-body,
+  .manual-input-card .ant-card-body {
+    padding: 16px !important;
+  }
+}

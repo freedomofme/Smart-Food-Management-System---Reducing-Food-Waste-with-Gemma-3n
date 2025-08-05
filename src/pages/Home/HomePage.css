@@ -1,0 +1,316 @@
+.home-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8f5e8 0%, #f0f9ff 100%);
+  padding: 20px;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.home-title {
+  color: #2d5016 !important;
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  font-size: 2.2rem !important;
+}
+
+.home-subtitle {
+  color: #52c41a !important;
+  font-size: 1.1rem !important;
+  margin-bottom: 0 !important;
+  font-weight: 500;
+}
+
+.home-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.main-actions-card,
+.quick-actions-card,
+.eco-tip-card {
+  border-radius: 16px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  border: none !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+}
+
+.section-title {
+  color: #2d5016 !important;
+  margin-bottom: 20px !important;
+  font-weight: 600 !important;
+}
+
+.action-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.camera-button,
+.upload-button {
+  width: 100% !important;
+  min-width: 140px !important;
+}
+
+/* 修复Upload组件包裹导致的宽度问题 */
+.upload-wrapper {
+  width: 100% !important;
+  display: block !important;
+}
+
+.upload-wrapper .ant-upload {
+  width: 100% !important;
+  display: block !important;
+}
+
+.upload-wrapper .ant-upload .ant-btn {
+  width: 100% !important;
+}
+
+.camera-button {
+  background: linear-gradient(135deg, #52c41a, #73d13d) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  height: 60px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 16px rgba(82, 196, 26, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.camera-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(82, 196, 26, 0.4) !important;
+}
+
+.upload-button {
+  background: linear-gradient(135deg, #1890ff, #40a9ff) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 12px !important;
+  height: 60px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 16px rgba(24, 144, 255, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.upload-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(24, 144, 255, 0.4) !important;
+  color: white !important;
+}
+
+.manual-button {
+  background: linear-gradient(135deg, #fa8c16, #ffa940) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 12px !important;
+  height: 60px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 16px rgba(250, 140, 22, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.manual-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(250, 140, 22, 0.4) !important;
+  color: white !important;
+}
+
+.quick-action-button {
+  height: 50px !important;
+  border-radius: 12px !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  border: 2px solid #f0f0f0 !important;
+  background: white !important;
+  color: #2d5016 !important;
+  transition: all 0.3s ease !important;
+}
+
+.quick-action-button:hover {
+  border-color: #52c41a !important;
+  color: #52c41a !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(82, 196, 26, 0.2) !important;
+}
+
+.eco-tip-card {
+  background: linear-gradient(135deg, #f6ffed, #e6f7ff) !important;
+  border: 2px solid #b7eb8f !important;
+}
+
+.eco-tip {
+  color: #2d5016 !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 0 !important;
+  text-align: center;
+  font-weight: 500;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+}
+
+.loading-text {
+  margin-top: 16px;
+  font-size: 16px;
+  color: #52c41a;
+  font-weight: 500;
+}
+
+.camera-modal .ant-modal-content,
+.result-modal .ant-modal-content {
+  border-radius: 16px !important;
+  overflow: hidden;
+}
+
+.camera-modal .ant-modal-header,
+.result-modal .ant-modal-header {
+  background: linear-gradient(135deg, #52c41a, #73d13d) !important;
+  border-bottom: none !important;
+}
+
+.camera-modal .ant-modal-title,
+.result-modal .ant-modal-title {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+.camera-modal .ant-modal-close,
+.result-modal .ant-modal-close {
+  color: white !important;
+}
+
+.camera-modal .ant-modal-close:hover,
+.result-modal .ant-modal-close:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .home-page {
+    padding: 12px;
+    background: #f5f5f5;
+  }
+  
+  .home-header {
+    margin-bottom: 20px;
+    padding: 16px;
+  }
+  
+  .home-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .home-subtitle {
+    font-size: 1rem !important;
+  }
+  
+  .home-content {
+    gap: 16px;
+  }
+  
+  .action-buttons {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .camera-button,
+  .upload-button,
+  .manual-button {
+    height: 56px !important;
+    font-size: 15px !important;
+  }
+  
+  .quick-action-button {
+    height: 48px !important;
+    font-size: 15px !important;
+  }
+  
+  .section-title {
+    font-size: 1.1rem !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .eco-tip {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page {
+    padding: 8px;
+  }
+  
+  .home-header {
+    padding: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .home-title {
+    font-size: 1.6rem !important;
+  }
+  
+  .home-subtitle {
+    font-size: 0.9rem !important;
+  }
+  
+  .camera-button,
+  .upload-button,
+  .manual-button {
+    height: 52px !important;
+    font-size: 14px !important;
+  }
+  
+  .quick-action-button {
+    height: 44px !important;
+    font-size: 14px !important;
+  }
+  
+  .section-title {
+    font-size: 1rem !important;
+  }
+  
+  .eco-tip {
+    font-size: 13px !important;
+  }
+  
+  .camera-modal,
+  .result-modal {
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  .camera-modal .ant-modal-content,
+  .result-modal .ant-modal-content {
+    border-radius: 0 !important;
+  }
+}

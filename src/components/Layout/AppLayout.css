@@ -1,0 +1,110 @@
+/* 应用布局样式 */
+.app-layout {
+  min-height: 100vh;
+  background: #f0f2f5;
+}
+
+/* 移动端布局 */
+.app-layout.mobile-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content {
+  margin: 0;
+  padding: 0;
+  background: #f0f2f5;
+  min-height: calc(100vh - 64px - 70px); /* 减去header和底部导航高度 */
+  padding-bottom: 70px; /* 为底部导航留出空间 */
+  flex: 1;
+}
+
+.content-wrapper {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 加载状态样式 */
+.app-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f2f5;
+}
+
+.app-loading .ant-spin {
+  color: #1890ff;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 16px;
+  }
+  
+  .app-content {
+    min-height: calc(100vh - 56px - 65px); /* 移动端header和底部导航高度 */
+    padding-bottom: 65px;
+  }
+}
+
+@media (max-width: 576px) {
+  .content-wrapper {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-content {
+    padding-bottom: 60px;
+  }
+}
+
+/* 错误提示样式 */
+.app-content .ant-alert {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 内容区域动画 */
+.content-wrapper {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 滚动条样式 */
+.app-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.app-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.app-content::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.app-content::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
