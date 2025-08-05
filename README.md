@@ -16,7 +16,7 @@
 
 ### Recipe Recommendations
 
-<img src="screenshots/recipe-recommendation.jpg"alt="Recipe Recommendations" width="300">
+<img src="screenshots/recommendation.jpg" alt="Recipe Recommendations" width="300">
 
 </div>
 
