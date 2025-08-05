@@ -1,5 +1,25 @@
 # Smart Food Management System
 
+## 🌐 Live Demo
+
+**Experience the app now:** [https://traegemmaa8pw1-nda3l1hu5-asdfasdf3s-projects.vercel.app/](https://traegemmaa8pw1-nda3l1hu5-asdfasdf3s-projects.vercel.app/)
+
+## 📱 App Screenshots
+
+<div align="center">
+
+### Homepage - Smart Food Manager
+<img src="screenshots/homepage.jpg" alt="Smart Food Manager Homepage" width="300">
+
+### Photo Recognition Feature
+<img src="screenshots/photo-recognition.jpg" alt="Food Photo Recognition" width="300">
+
+### Recipe Recommendations
+
+<img src="screenshots/recipe-recommendation.jpg"alt="Recipe Recommendations" width="300">
+
+</div>
+
 ## 🌟 Project Overview
 
 The Smart Food Management System is an AI-powered web application built with React and TypeScript that helps users manage their food inventory intelligently, reduce food waste, and contribute to environmental sustainability. Powered by the Gemma AI model, this system provides intelligent food recognition, expiry tracking, and personalized recipe recommendations.
