@@ -14,6 +14,9 @@
 ### Photo Recognition Feature
 <img src="screenshots/photo-recognition.jpg" alt="Food Photo Recognition" width="300">
 
+### Food Inventory
+<img src="screenshots/food-inventory.jpg" alt="Food Inventory" width="300">
+
 ### Recipe Recommendations
 
 <img src="screenshots/recommendation.jpg" alt="Recipe Recommendations" width="300">
