@@ -7,8 +7,8 @@ const AddFoodPage: React.FC = () => {
   return (
     <div>
       <Card>
-        <Title level={2}>添加食物</Title>
-        <p>添加食物页面正在开发中...</p>
+        <Title level={2}>Add Food</Title>
+        <p>Add food page is under development...</p>
       </Card>
     </div>
   );

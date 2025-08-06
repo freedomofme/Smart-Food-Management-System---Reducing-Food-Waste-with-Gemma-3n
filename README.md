@@ -2,7 +2,7 @@
 
 ## 🌐 Live Demo
 
-**Experience the app now:** [https://traegemmaa8pw1-nda3l1hu5-asdfasdf3s-projects.vercel.app/](https://traegemmaa8pw1-nda3l1hu5-asdfasdf3s-projects.vercel.app/)
+**Experience the app now:** [https://traegemmaa8pw1-26amx0fr0-asdfasdf3s-projects.vercel.app](https://traegemmaa8pw1-26amx0fr0-asdfasdf3s-projects.vercel.app)
 
 ## 📱 App Screenshots
 

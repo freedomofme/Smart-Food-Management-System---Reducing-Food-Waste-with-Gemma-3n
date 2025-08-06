@@ -1,0 +1,236 @@
+.settings-page {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e8f5e8 100%);
+}
+
+.settings-title {
+  margin-bottom: 24px !important;
+  color: #1f2937 !important;
+  font-weight: 700 !important;
+}
+
+.settings-card {
+  margin-bottom: 24px;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.settings-card .ant-card-head {
+  border-radius: 12px 12px 0 0 !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+.settings-card .ant-card-head-title {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.general-settings-card .ant-card-head {
+  background-color: #f0f9ff !important;
+}
+
+.data-management-card .ant-card-head {
+  background-color: #fff2e8 !important;
+}
+
+.about-card .ant-card-head {
+  background-color: #f6ffed !important;
+}
+
+.settings-list-item {
+  padding: 16px 0 !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+.settings-list-item:last-child {
+  border-bottom: none !important;
+}
+
+.settings-avatar {
+  background-color: #52c41a !important;
+  color: white !important;
+}
+
+.settings-switch {
+  background-color: #f0f0f0 !important;
+}
+
+.settings-switch.ant-switch-checked {
+  background-color: #52c41a !important;
+}
+
+.settings-select {
+  border-radius: 6px !important;
+}
+
+.clear-data-section {
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.clear-data-button {
+  margin-top: 12px !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+}
+
+.about-section {
+  padding: 20px;
+}
+
+.about-info {
+  margin-bottom: 16px;
+}
+
+.about-links {
+  margin-top: 16px;
+}
+
+.about-links .ant-btn-link {
+  padding: 4px 8px !important;
+  height: auto !important;
+  font-weight: 500 !important;
+}
+
+.version-info {
+  color: #6b7280 !important;
+  font-size: 14px !important;
+}
+
+.feature-info {
+  color: #6b7280 !important;
+  font-size: 14px !important;
+}
+
+.app-description {
+  color: #6b7280 !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .settings-page {
+    padding: 16px;
+  }
+  
+  .settings-title {
+    font-size: 24px !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .settings-card {
+    margin-bottom: 16px;
+  }
+  
+  .settings-list-item {
+    padding: 12px 0 !important;
+  }
+  
+  .ant-list-item-meta-title {
+    font-size: 14px !important;
+  }
+  
+  .ant-list-item-meta-description {
+    font-size: 12px !important;
+  }
+  
+  .settings-select {
+    width: 100px !important;
+  }
+  
+  .about-section {
+    padding: 16px;
+  }
+  
+  .clear-data-section {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-page {
+    padding: 12px;
+  }
+  
+  .settings-title {
+    font-size: 20px !important;
+    text-align: center;
+  }
+  
+  .ant-row {
+    flex-direction: column;
+  }
+  
+  .ant-col {
+    margin-bottom: 16px;
+  }
+  
+  .about-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .about-links .ant-btn-link {
+    margin-bottom: 8px;
+  }
+}
+
+/* 动画效果 */
+.settings-card {
+  transition: all 0.3s ease !important;
+}
+
+.settings-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1) !important;
+}
+
+.clear-data-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 77, 79, 0.3) !important;
+}
+
+.settings-switch {
+  transition: all 0.3s ease !important;
+}
+
+.settings-avatar {
+  transition: all 0.3s ease !important;
+}
+
+.settings-avatar:hover {
+  transform: scale(1.1);
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+  .settings-page {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  }
+  
+  .settings-title {
+    color: #f9fafb !important;
+  }
+  
+  .settings-card {
+    background: #374151 !important;
+    border-color: #4b5563 !important;
+  }
+  
+  .settings-card .ant-card-head {
+    background-color: #4b5563 !important;
+    border-color: #6b7280 !important;
+  }
+  
+  .clear-data-section {
+    background: #4b5563;
+    border-color: #6b7280;
+  }
+}
